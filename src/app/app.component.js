@@ -6,17 +6,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
+var Hero = (function () {
+    function Hero() {
+    }
+    return Hero;
+}());
+exports.Hero = Hero;
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Tour of heroes';
-        this.hero = 'Windstorm';
+        this.hero = {
+            id: 1,
+            name: 'Windstorm'
+        };
     }
     return AppComponent;
 }());
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: "<h1>{{title}}</h1><h2>{{hero}} details!</h2>",
+        template: "<h1>{{title}}</h1><h2>{{hero.name}} details!</h2>",
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;
