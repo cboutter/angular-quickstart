@@ -29,7 +29,7 @@ const HEROES: Hero[] = [
   		</li>
   	</ul>
   	<hero-detail [hero]="selectedHero"></hero-detail>
-  	`
+  	`,
   styles: [`
   .selected {
     background-color: #CFD8DC !important;
