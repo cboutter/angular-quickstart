@@ -82,7 +82,7 @@ export class AppComponent implements OnInit {
 	}
 
 	getHeroes(): void {
-		this.heroes = this.heroService.getHeroes();
+		this.heroService.getHeroes().then(h => this.heroes = h);
 	}
 
 	onSelect(hero: Hero) {

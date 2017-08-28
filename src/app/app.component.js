@@ -19,7 +19,8 @@ var AppComponent = (function () {
         this.getHeroes();
     };
     AppComponent.prototype.getHeroes = function () {
-        this.heroes = this.heroService.getHeroes();
+        var _this = this;
+        this.heroService.getHeroes().then(function (h) { return _this.heroes = h; });
     };
     AppComponent.prototype.onSelect = function (hero) {
         this.selectedHero = hero;
